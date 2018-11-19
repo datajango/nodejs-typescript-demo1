@@ -30,6 +30,7 @@ export class DatabaseProvider {
         }
 
         const { type, host, port, username, password, database, ssl } = DatabaseProvider.configuration;
+        
         DatabaseProvider.connection = await createConnection({
             type, host, port, username, password, database,
             extra: {

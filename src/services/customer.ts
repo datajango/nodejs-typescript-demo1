@@ -16,7 +16,7 @@ export class CustomerService {
         const connection = await DatabaseProvider.getConnection();
         return await connection.getRepository(Customer).save(newCustomer);
     }
-
+ 
     public async list(): Promise<Customer[]> {
         const connection = await DatabaseProvider.getConnection();
         return await connection.getRepository(Customer).find();
